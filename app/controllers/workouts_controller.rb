@@ -8,7 +8,8 @@ class WorkoutsController < ApplicationController
     @pecs_exercises = exos_generator('Pecs')
     @back_exercises = exos_generator('Dos')
     @tris_and_epaules_exercises = exos_generator('Tris') + exos_generator('Epaules')
-    @tabata_cardio = tabata_generator(@cardio_exercises, 'Squats sautés')
+    @tabata_cardio1 = tabata_generator(@cardio_exercises, 'Squats sautés')
+    @tabata_cardio2 = tabata_generator(@cardio_exercises, 'Squats sautés')
     @tabata_abdos = tabata_generator(@abdos_exercises, 'Gainage abdos position assise')
     @tabata_force1 = [pecs_exo_selector, back_exo_selector, tris_and_epaules_exo_selector].shuffle
     @tabata_force2 = [pecs_exo_selector, back_exo_selector, tris_and_epaules_exo_selector].shuffle
